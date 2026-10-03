@@ -25,6 +25,15 @@ function printMessage(message) {
 
 const login = document.querySelector('#login');
 const password = document.querySelector('#password');
+const submit = document.querySelector('#submit');
 
 waitFor(login, 'click').then(printMessage);
+waitFor(login, 'input').then(printMessage);
+waitFor(login, 'blur').then(printMessage);
+
+waitFor(password, 'click').then(printMessage);
 waitFor(password, 'input').then(printMessage);
+waitFor(password, 'blur').then(printMessage);
+
+waitFor(submit, 'click').then(printMessage);
+waitFor(submit, 'blur').then(printMessage);
